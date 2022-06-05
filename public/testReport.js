@@ -1,4 +1,11 @@
-const api_url = "http://localhost:3000/reports";
+let api_url = "";
+if(location.href.includes('localhost'))
+{
+  api_url = "http://localhost:3000/reports";
+}
+else{
+  api_url = "https://agrilinks-assignment.herokuapp.com/reports";
+}
 
 async function getData() {
   let get_api_url =
