@@ -34,7 +34,13 @@ const createReport = async (req, res) => {
       // Append price associated to current user in priceArray in Base form (kg)
       userArray = [...existingReport.users, userId];
       priceArray = [...existingReport.prices, basePrice];
-      const avgPrice = (existingReport.averagePrice + basePrice) / 2;
+      let avgPrice = 0;
+      let sum = 0;
+      priceArray.forEach(price => {
+        sum += price;
+      });
+      avgPrice = sum/priceArray.length;
+      avgPrice = avgPrice.toFixed(2);
       const reportId = existingReport.reportID;
       try {
         await Report.updateOne(
