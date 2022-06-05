@@ -45,7 +45,7 @@ function postData() {
       marketID: document.getElementById("marketId").value,
       marketName: document.getElementById("marketName").value,
       marketType: document.getElementById("marketType").value,
-      cmdtyID: document.getElementById("cmdtyName").value,
+      cmdtyID: document.getElementById("cmdtyID").value,
       cmdtyName: document.getElementById("cmdtyName").value,
       priceUnit: document.getElementById("priceUnit").value,
       convFctr: document.getElementById("convFctr").value,
